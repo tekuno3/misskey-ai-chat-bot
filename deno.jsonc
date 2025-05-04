@@ -1,0 +1,30 @@
+{
+  "compilerOptions": {
+    "strict": true
+  },
+  "tasks": {
+    "start": "deno serve --env-file=.env --allow-env main.ts",
+    "test": "deno test --env-file=.env.test --allow-env --allow-net"
+  },
+  "fmt": {
+    "options": {
+      "singleQuote": true
+    }
+  },
+  "lint": {
+    "rules": {
+      "include": ["no-explicit-any"]
+    }
+  },
+  "imports": {
+    "@/": "./",
+    "@dayjs": "https://esm.sh/dayjs@1.11.9?dts",
+    "@hono/hono": "jsr:@hono/hono@^4.7.8",
+    "@std/expect": "jsr:@std/expect@^1.0.15",
+    "@std/testing": "jsr:@std/testing@^1.0.11",
+    "@valibot/valibot": "jsr:@valibot/valibot@^1.0.0",
+    "groq-sdk": "npm:groq-sdk@^0.20.1",
+    "neverthrow": "npm:neverthrow@^8.2.0"
+  },
+  "unstable": ["kv", "cron"]
+}
