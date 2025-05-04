@@ -1,6 +1,6 @@
 import { describe, it } from '@std/testing/bdd';
 import { expect } from '@std/expect';
-import app from '@/main.ts';
+import app from '@/src/main.ts';
 
 describe('ping test', () => {
   it('should respond with 200', async () => {
